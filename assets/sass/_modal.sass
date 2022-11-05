@@ -1,0 +1,264 @@
+.btn-modal
+    position: absolute
+    top: 98.5%
+    left: 0
+    right: 0
+    min-width: 324px
+    max-width: 324px
+    background: transparent
+    padding: 26px 20px 20px
+    margin: -5px auto 0
+    z-index: 5
+    font-family: $siteFontFamily !important
+    font-size: 26px
+    font-weight: 700
+    color: #fff
+    text-align: center
+    letter-spacing: 0.75px
+    border-radius: 0 0 25px 25px
+    background: $primary-color
+    -webkit-clip-path: polygon(50% 9%, 100% 0, 100% 100%, 0 100%, 0 0)
+    clip-path: polygon(50% 9%, 100% 0, 100% 100%, 0 100%, 0 0)
+    transition: all 0.25s ease-in-out
+    &:hover
+        padding-top: 29px
+        color: #000
+        background: $primary-color
+    @media(max-width: 1700px)
+        top: 99.5%
+    @media(max-width: 1100px)
+        top: 99%
+    @media(max-width: 557px)
+        top: 98.7%
+    @media(max-width: 479px)
+        top: 99%
+        font-size: 18px
+        border-radius: 0 0 30px 30px
+        min-width: 90%
+        max-width: 90%
+    @media(max-width: 420px)
+        // top: 101%
+
+.modal
+    text-align: center
+
+.modal:after
+    content: ''
+    height: 100%
+    width: 1px
+    background: red
+    display: inline-block
+    vertical-align: middle
+    visibility: hidden
+
+.modal-dialog
+    display: inline-block
+    vertical-align: middle
+    max-width: 400px
+
+    @media(max-width: 559px)
+        max-width: 310px
+
+.modal-policy
+    max-width: 800px
+
+    p
+        font-size: 16px
+        line-height: 1.4
+        font-weight: 500
+        text-align: left
+
+.modal-content
+    background: #fff
+    border-radius: 20px
+    padding: 35px
+    @media(max-width: 767px)
+        padding: 25px
+    
+.cal-mod
+    &__title
+        font-size: 25px
+        font-weight: 600 
+        margin-bottom: 20px
+        text-align: center
+        color: $secondary-color
+        @media(max-width: 479px)
+            font-size: 20px
+        div
+            margin-top: 10px
+            font-size: 13px
+            font-weight: 600
+            color: #000
+    form
+        & .form-group
+            margin-bottom: 20px
+            position: relative
+            &.form-submit
+                margin-bottom: 0
+        input, textarea, select
+            position: relative
+            border: 1px solid #ccc
+            border-radius: 20px
+            padding: 10px 20px
+            width: 100%
+            font-size: 0.9rem
+            @media(max-width: 767px)
+                font-size: 0.8rem
+            &:focus
+                outline: none
+                border-color: $secondary-color
+                & ~ label 
+                    // display: none
+        input[type='file']
+            border: none
+            background: none
+
+        input[type='submit']
+            color: #fff
+            cursor: pointer
+            border-color: transparent
+            background: $primary-color
+            &:hover
+                background-color: $secondary-color
+            sup 
+                color: red
+                font-size: 16px
+
+
+
+        textarea
+            min-height: 100px
+        .radio-button-input
+            display: flex
+            align-items: center
+            margin-bottom: 20px
+            input
+
+            span
+                display: block
+                flex: 1 0 80%
+                position: relative
+                font-size: 12px
+                font-weight: 600
+                color: #443324
+                text-align: left
+        & .form-radio-span
+            display: block
+            font-size: 12px
+            font-weight: 600
+            color: #443324
+            text-align: left
+
+        .file-inp
+            position: relative
+            margin-bottom: 10px
+            label
+                color: #000
+                font-size: 20px
+                &:hover
+                    color: $primary-color
+                input
+                    position: absolute
+                    top: 0
+                    left: 0
+                    font-size: 0
+                    visibility: hidden
+            span
+                color: $primary-color
+                text-decoration: underline
+
+.form-check
+    display: flex
+    align-items: center
+    padding-left: 10px !important
+    input
+        opacity: 0
+        width: 0
+        max-width: 0
+        &:checked ~ label .custom-checkbox-ch
+            background-image: url(../img/check.svg)
+    .custom-checkbox-ch
+        width: 18px
+        flex: 0 0 18px
+        height: 18px
+        border: 1px solid #ccc
+        margin-right: 16px
+        border-radius: 4px
+        cursor: pointer
+        display: inline-block
+        background-repeat: no-repeat
+        background-size: contain
+        background-image: none
+    label
+        font-size: 0.9rem
+        text-align: left
+        margin-bottom: 0
+        position: relative
+        display: flex
+        color: #222
+        align-items: center
+        span
+            color: #222
+        @media(max-width: 414px)
+            font-size: 0.6rem
+            color: #222
+label
+    color: #222
+
+
+.form-check-input
+    flex: 0 0 14px
+    max-width: 14px
+    margin-top: 0  !important 
+    height: 14px
+    margin-right: 10px
+    padding: 0 !important
+    &:checked
+        background-color: #fff
+        border-color: $primary-color
+    &:focus 
+        box-shadow: none !important
+
+.form-check-label
+    margin-left: 10px
+    @media(max-width: $phones)
+        text-align: left
+
+.form-check-input:checked[type=checkbox]
+    background-image: url(../img/check.svg)
+
+.form-check-input:checked[type=checkbox]
+    background-color: #0d6efd !important
+    border-color: #0d6efd !important
+
+.form-check-input:checked[type=radio]
+    background-image: url(../img/radio-bg.svg)
+
+.modal-close
+    background: none
+    width: 25px
+    height: 25px
+    border-radius: 50%
+    position: absolute
+    top: 15px
+    right: 15px
+    font-size: 0
+    background: url(../img/x.svg) center no-repeat
+    background-size: 12px 12px
+    &:hover
+        background-color: $secondary-color
+
+label 
+    -webkit-touch-callout: none 
+    -webkit-user-select: none 
+    -khtml-user-select: none 
+    -moz-user-select: none 
+    -ms-user-select: none 
+    user-select: none 
+
+.form-adress
+    font-size: 0.9rem
+    margin-bottom: 20px
+    text-align: left
+    span
+        font-weight: bold
